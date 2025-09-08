@@ -1,0 +1,148 @@
+(*********************)
+(*** BOSON FIELDS (EXCEPT GAUGE BOSONS) ***)
+(*********************)
+
+M$Fields = {
+
+(*----------------------------------*)
+(*** Standard model scalar fields ***)
+(*----------------------------------*)
+
+(* physical Higgs: Q = 0 *) 
+S[1] == {
+	ClassName        -> h,
+	SelfConjugate    -> True,
+	Indices          -> {},
+	Mass             -> {mh, Internal},
+	Width            -> {Wh, 1.},
+	ParticleName     -> "h",
+	PDG              -> 25,
+	PropagatorLabel  -> "h",
+	PropagatorType   -> ScalarDash,
+	PropagatorArrow  -> None},
+
+(* neutral Goldstone *)
+S[2] == {
+        ClassName -> G0,
+	SelfConjugate -> True,
+	Mass -> {MZ, Internal},
+	Width -> WG0,
+	PropagatorLabel -> "G0",
+	PropagatorType -> D,
+	PropagatorArrow -> None,
+	ParticleName ->"G0",
+	PDG -> 250,
+	FullName -> "G0",
+	Goldstone -> Z },
+
+(* charged Goldstones *)
+S[3] == {
+	ClassName -> Gch,
+	SelfConjugate -> False,
+	Mass -> {MW, Internal},
+	Width -> WGp,
+	PropagatorLabel -> "Gch",
+	PropagatorType -> D,
+	PropagatorArrow -> None,
+	ParticleName ->"G+",
+	AntiParticleName ->"G-",
+	PDG -> 251,
+	FullName -> "Gch",
+	TeXClassName -> "Gch",
+	TeXParticleName -> "G^+",
+	TeXAntiParticleName -> "G^-",
+	Goldstone -> W,
+	QuantumNumbers -> {Q -> 1}}, 
+
+
+(*-----------------------*)
+(*** IDM scalar fields ***)
+(*-----------------------*)
+
+(* NB: Tildes in the ParticleName's, to comply to the CalcHEP notation *)
+
+(* Neutral vector *)
+V[7] == {
+	ClassName        -> V0,
+	SelfConjugate    -> True,
+	Indices          -> {},
+	Mass             -> {MV0, Internal},
+	Width            -> {WV0, 0.},
+	ParticleName     -> "~V0",
+	PDG              -> 35,
+	PropagatorLabel  -> "V0",
+	PropagatorType   -> Sine,
+	PropagatorArrow  -> None},
+
+(* Neutral pseudoscalar *)
+V[8] == {
+	ClassName        -> A0,
+	SelfConjugate    -> True,
+	Indices          -> {},
+	Mass             -> {MA0, Internal},
+	Width            -> {WA0, 1.},
+	ParticleName     -> "~A0",
+	PDG              -> 36,
+	PropagatorLabel  -> "A0",
+	PropagatorType   -> Sine,
+	PropagatorArrow  -> None},
+
+
+(* Mass Eigenstates  for charged scalars *)
+
+V[9] == {
+	ClassName        -> Vch,
+	SelfConjugate    -> False,
+	Mass             -> {MVch, Internal},
+	Indices          -> {},
+	QuantumNumbers   -> {Q -> 1},
+    Width            -> 0,
+	ParticleName     -> "~V+",
+	AntiParticleName -> "~V-",
+	PDG              -> 220
+	},
+
+R[1] == {
+
+ClassName->NN1,
+SelfConjugate->True,
+Mass->10,
+Width->0,
+PDG->1000049,
+ParticleName -> "~NN1",
+PropagatorLabel->"NN1",
+PropagatorType->Straight,
+PropagatorArrow->None
+
+},
+
+R[2] == {
+
+ClassName->NN2,
+SelfConjugate->True,
+Mass->20,
+Width->0,
+PDG->1000050,
+ParticleName -> "~NN2",
+PropagatorLabel->"NN2",
+PropagatorType->Straight,
+PropagatorArrow->None
+
+},
+
+R[3] == {
+
+ClassName->NN3,
+SelfConjugate->True,
+Mass->30,
+Width->0,
+PDG->1000051,
+ParticleName -> "~NN3",
+PropagatorLabel->"NN3",
+PropagatorType->Straight,
+PropagatorArrow->None
+
+}
+
+}
+
