@@ -1,6 +1,8 @@
 # Rarita-Schwinger_Scotogenic
 Rarita Schwinger Scotogenic model
 
-FeynRules Version based in arxiv:
+Based in: arxiv:
 
-micrOmegas version xxxx
+FeynRules 2.3 version 
+
+micrOmegas_6.0.3 version 
